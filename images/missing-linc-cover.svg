@@ -1,0 +1,72 @@
+<svg width="300" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bookGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001122;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003366;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000011;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066cc;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="400" fill="url(#bookGradient)"/>
+  
+  <!-- Circuit pattern background -->
+  <g stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.3">
+    <path d="M50 50 L100 50 L100 100 L150 100 L150 150"/>
+    <path d="M200 80 L250 80 L250 130 L200 130 L200 180"/>
+    <path d="M80 200 L130 200 L130 250 L180 250 L180 300"/>
+    <circle cx="100" cy="100" r="3" fill="#00d4ff"/>
+    <circle cx="200" cy="130" r="3" fill="#00d4ff"/>
+    <circle cx="130" cy="250" r="3" fill="#00d4ff"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="150" y="150" font-family="Orbitron, monospace" font-size="32" font-weight="bold" 
+        text-anchor="middle" fill="url(#textGradient)" filter="url(#glow)">
+    THE
+  </text>
+  <text x="150" y="190" font-family="Orbitron, monospace" font-size="32" font-weight="bold" 
+        text-anchor="middle" fill="url(#textGradient)" filter="url(#glow)">
+    MISSING
+  </text>
+  <text x="150" y="230" font-family="Orbitron, monospace" font-size="32" font-weight="bold" 
+        text-anchor="middle" fill="url(#textGradient)" filter="url(#glow)">
+    LINC
+  </text>
+  
+  <!-- Series info -->
+  <text x="150" y="260" font-family="Exo 2, sans-serif" font-size="14" 
+        text-anchor="middle" fill="#00ffff" opacity="0.8">
+    THE TASHUIN WARS BOOK 1
+  </text>
+  
+  <!-- Author -->
+  <text x="150" y="320" font-family="Exo 2, sans-serif" font-size="18" 
+        text-anchor="middle" fill="#ffffff">
+    CARL WILLIAMS
+  </text>
+  
+  <!-- Sci-fi elements -->
+  <g stroke="#00d4ff" stroke-width="2" fill="none" opacity="0.6">
+    <polygon points="20,20 40,20 40,40 20,40" />
+    <polygon points="260,20 280,20 280,40 260,40" />
+    <polygon points="20,360 40,360 40,380 20,380" />
+    <polygon points="260,360 280,360 280,380 260,380" />
+  </g>
+  
+  <!-- Central holographic element -->
+  <circle cx="150" cy="280" r="30" stroke="#00ffff" stroke-width="1" fill="none" opacity="0.4"/>
+  <circle cx="150" cy="280" r="20" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.6"/>
+  <circle cx="150" cy="280" r="10" stroke="#0066cc" stroke-width="1" fill="none" opacity="0.8"/>
+</svg>
